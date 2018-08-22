@@ -1,0 +1,107 @@
+@media screen and (max-width: 480px) {
+	header .head .menuIcon {
+    	background-image: url("../images/menu-icon-black.png");
+    	background-size: cover;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    	right: -5%;
+		top: 30px;
+	    -webkit-transition: all .3s ease 0s;
+	    -moz-transition: all .3s ease 0s;
+	    -ms-transition: all .3s ease 0s;
+	    -o-transition: all .3s ease 0s;
+	    transition: all .3s ease 0s;
+    }
+    header .head .navList {
+    	position: absolute;
+		top: 55px;
+		right:-12%;
+		z-index: 15;
+		padding: 10px 15px;
+		background-color: #fff;
+		width: 60px;
+		display: none;
+		border-radius: 3px
+    }
+    header .head .navList li {
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		font-size: 14px;
+		box-sizing: border-box;
+    }
+    header .head .navList li a {
+    	color: #000
+    }
+    header .head .navList li.listNow {
+    	border-bottom:2px solid black;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.head .navList {
+		position: absolute;
+		right: 0px;
+		top: 25px;
+	}
+	.head .navList li{
+		float: left;
+		margin-left: 20px;
+	}
+	.head .navList li a{
+		font-size:16px;
+		color:#000;
+		line-height: 30px;
+		height: 30px;
+		display: block;
+	}
+	.head .navList li a:hover {
+		border-bottom: 2px solid black;
+	}
+}
+@media screen and (min-width: 769px) {
+	.head .navList {
+		position: absolute;
+		right: 0px;
+		top: 25px;
+	}
+	.head .navList li{
+		float: left;
+		margin-left: 50px;
+	}
+	.head .navList li a{
+		font-size:16px;
+		color:#000;
+		line-height: 30px;
+		height: 30px;
+		display: block;
+	}
+	.head .navList li a:hover {
+		border-bottom: 2px solid black;
+	}
+}
+header {
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid black;
+	box-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+.head {
+	height: 80px;
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+.head .leftLogo {
+	width: 134px;
+	height: 41px;
+	background-image: url("../images/index_01_logo.png");
+	background-size: cover;
+	float: left;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.nowList {
+	border-bottom: 2px solid black;
+}
