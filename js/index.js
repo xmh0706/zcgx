@@ -20,10 +20,17 @@ function nextArrow(){
 // 
 // 
 $(document).ready(function(){
+	$("#bannerContent .button").click(function(){
+		$("#bannerContent .button .hideImg").css("display","block")
+	})
+
+
 	$("#bannerDot li").click(function(){
   		flash = ($(this).index());
   		chooseATTR()
-	});//右边列表点击切换
+	});
+	//右边列表点击切换
+
 	var waitTime = 0
 	$('#bannerContent').bind('mousewheel DOMMouseScroll', function(event) { 
 	// console.log(event.originalEvent.wheelDelta);
@@ -49,8 +56,8 @@ $(document).ready(function(){
 			}
 		}
 	});
-
-	//滚轮切换	
+	//滚轮切换
+	
 	var click = 0
 	$(".menuIcon").click(function(){
 		if(click % 2 == 0) {
@@ -61,11 +68,10 @@ $(document).ready(function(){
 			$(".navList").css('display',"none");
 			$(".menuIcon").css("transform","none")
 			click = 0
-		}
-  		
+		}	
 	});
+	//响应式布局menu变化
 
-	//鼠标按住滑动界面
 	$("#bannerContent").mousedown(function(event){
 		var downY = event.originalEvent.clientY
 		var height= document.getElementById("banner").offsetHeight
@@ -91,6 +97,7 @@ $(document).ready(function(){
 		}
 		chooseATTR()
 	})
+	//鼠标按住滑动界面
 	
 })
 // 
