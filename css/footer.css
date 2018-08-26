@@ -51,6 +51,11 @@ li{
 		margin-top: 10px;
 	}
 }
+@media screen and (min-width: 481px)  and (max-width: 768px) {
+	footer .content .footerLeftText p {
+		width: 280px;
+	}
+}
 @media screen and (min-width: 481px) {
 	footer .content {
 		position: relative;
@@ -60,7 +65,7 @@ li{
 	footer .content .footerRightText{
 		position: absolute;
 		left: 45%;
-		top: 70%
+		top: 71%
 	}
 	footer .content .footerRightText .text {
 		margin-top: 20px;

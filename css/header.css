@@ -55,7 +55,7 @@
 		height: 30px;
 		display: block;
 	}
-	.head .navList li a:hover {
+	.head .navList li:hover {
 		border-bottom: 2px solid black;
 	}
 }
@@ -76,7 +76,7 @@
 		height: 30px;
 		display: block;
 	}
-	.head .navList li a:hover {
+	.head .navList li:hover {
 		border-bottom: 2px solid black;
 	}
 }
