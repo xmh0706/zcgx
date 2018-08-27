@@ -125,6 +125,7 @@ $(document).ready(function(){
 	});
 	$("#bannerContent").bind("touchmove",function(e){  	
 	    var moveEndY = e.originalEvent.changedTouches[0].pageY;
+	    moveY = 0
 	    moveY=moveEndY-startY;
 	    // console.log(moveY)
 	    $('#bannerContent').css("top", (-height*flash)+moveY + "px");
