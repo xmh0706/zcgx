@@ -242,6 +242,7 @@
 	background-size:cover;
 	position: absolute;
 	cursor: pointer;
+	z-index: 5
 }
 #bannerContent .whiteArrow {
 	background-image: url("../images/nextArrowWhite.png");
