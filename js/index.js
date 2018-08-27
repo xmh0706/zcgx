@@ -45,6 +45,7 @@ function setVideo () {
 ///
 
 $(document).ready(function(){
+	var height= document.getElementById("banner").offsetHeight
 	$("#bannerContent .button").click(function(){
 		$("#bannerContent .button .hideImg").css("display","block")
 	})
@@ -93,7 +94,6 @@ $(document).ready(function(){
 
 	$("#bannerContent").mousedown(function(event){
 		var downY = event.originalEvent.clientY
-		var height= document.getElementById("banner").offsetHeight
 		chooseY = 0
 		$(this).mousemove(function(event){
 			 chooseY = event.originalEvent.clientY - downY
@@ -123,14 +123,11 @@ $(document).ready(function(){
 	    // console.log(e)
 	    // console.log(startY)
 	});
-	$("#bannerContent").bind("touchmove",function(e){  
-		var height= document.getElementById("banner").offsetHeight
+	$("#bannerContent").bind("touchmove",function(e){  	
 	    var moveEndY = e.originalEvent.changedTouches[0].pageY;
 	    moveY=moveEndY-startY;
-	    console.log(moveY)
-	   
+	    // console.log(moveY)
 	    $('#bannerContent').css("top", (-height*flash)+moveY + "px");
-	  
 	});
 	$("#bannerContent").on("touchend",function(e){
 		 //向上滑动
@@ -150,8 +147,6 @@ $(document).ready(function(){
 	    chooseATTR()
 	})//移动端touch滑动
 
-
-
 	setVideo ()//视频大小控制函数
 })
 // 
@@ -159,6 +154,7 @@ $(window).resize(function(){
 	var height= document.getElementById("banner").offsetHeight
 	$('#bannerContent').css("transition", "none");
 	$('#bannerContent').css("top", -height*flash + "px");
+
 	setVideo ()//视频大小控制函数
 
 	//浏览器大小变化时触发
