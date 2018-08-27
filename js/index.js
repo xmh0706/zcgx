@@ -134,7 +134,7 @@ $(document).ready(function(){
 	});
 	$("#bannerContent").on("touchend",function(e){
 		 //向上滑动
-		if(moveY < 0){  
+		if(moveY < -30){  
 	    	flash ++;
 			if( flash==7 ) {
 				flash = 6;
@@ -142,7 +142,7 @@ $(document).ready(function(){
 			}
 	    }
 	    //向下滑动
-	    else if(moveY > 0){
+	    else if(moveY > 30){
 	    	flash --;
 			flash =(flash==-1)?0:flash;
 			$('html,body').animate({scrollTop:0 }, 500);
