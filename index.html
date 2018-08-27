@@ -23,10 +23,14 @@
 							<li><a href="aboutUs.html">关于我们</a></li>			
 						</ul>
 					</div>
-					<div class="content">
+					<video id="indexVideo" loop="loop" autoplay="autoplay" playsinline="true" x-webkit-airplay="true" x5-video-player-fullscreen="true" webkit-playsinline="true">
+						<source src="./videos/index_01.mp4" />
+						<source src="./videos/index_01.ogg" />
+					</video>
+					<!-- <div class="content">
 						<h1>中创国新</h1>
 						<h1>让每个检验检测认证人更有价值</h1>
-					</div>
+					</div> -->
 					<div class="nextArrow whiteArrow" onclick="nextArrow()"></div>
 				</div>
 			</div>
@@ -59,6 +63,21 @@
 				<div class="content">
 					<h1>原创作者招募令</h1>
 					<p>每一个人都可以成为行业的网红，打造个人意见领袖。</p>
+					<div class="button">
+						<span>了解详情</span>
+						<div class="hideImg">
+							<img src="images/wx.png" alt="">
+							<span>扫一扫，了解更多</span>
+							<div class="closeIcon"></div>
+						</div>
+					</div>
+				</div>
+				<div class="nextArrow whiteArrow" onclick="nextArrow()"></div>
+			</div>
+			<div id="page_07" class="page otherOpacity">
+				<div class="content">
+					<h1>人脉圈</h1>
+					<p>用圈子的力量赋能</p>
 					<div class="button">
 						<span>了解详情</span>
 						<div class="hideImg">
@@ -105,6 +124,7 @@
 	
 	<ul id="bannerDot">
 		<li class="nowList"></li>
+		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
