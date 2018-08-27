@@ -48,8 +48,6 @@ $(document).ready(function(){
 	$("#bannerContent .button").click(function(){
 		$("#bannerContent .button .hideImg").css("display","block")
 	})
-
-
 	$("#bannerDot li").click(function(){
   		flash = ($(this).index());
   		chooseATTR()
@@ -96,6 +94,7 @@ $(document).ready(function(){
 	$("#bannerContent").mousedown(function(event){
 		var downY = event.originalEvent.clientY
 		var height= document.getElementById("banner").offsetHeight
+		chooseY = 0
 		$(this).mousemove(function(event){
 			 chooseY = event.originalEvent.clientY - downY
 			 // console.log(chooseY)
@@ -107,8 +106,8 @@ $(document).ready(function(){
 		// console.log(event.originalEvent.clientY)
 		if (chooseY < -30) {
 			flash ++;
-			if( flash==6 ) {
-				flash = 5;
+			if( flash==7 ) {
+				flash = 6;
 				$('html,body').animate({scrollTop:$('#footer').offset().top }, 500);
 			}
 		}else if(chooseY > 30){
@@ -119,6 +118,40 @@ $(document).ready(function(){
 		chooseATTR()
 	})//鼠标按住滑动界面
 	
+	$("#bannerContent").on("touchstart",function(e){
+	    startY = e.originalEvent.changedTouches[0].pageY;
+	    // console.log(e)
+	    // console.log(startY)
+	});
+	$("#bannerContent").bind("touchmove",function(e){  
+		var height= document.getElementById("banner").offsetHeight
+	    var moveEndY = e.originalEvent.changedTouches[0].pageY;
+	    moveY=moveEndY-startY;
+	    console.log(moveY)
+	   
+	    $('#bannerContent').css("top", (-height*flash)+moveY + "px");
+	  
+	});
+	$("#bannerContent").on("touchend",function(e){
+		 //向上滑动
+		if(moveY < 0){  
+	    	flash ++;
+			if( flash==7 ) {
+				flash = 6;
+				$('html,body').animate({scrollTop:$('#footer').offset().top }, 500);
+			}
+	    }
+	    //向下滑动
+	    else if(moveY > 0){
+	    	flash --;
+			flash =(flash==-1)?0:flash;
+			$('html,body').animate({scrollTop:0 }, 500);
+	    }
+	    chooseATTR()
+	})//移动端touch滑动
+
+
+
 	setVideo ()//视频大小控制函数
 })
 // 

@@ -1,4 +1,7 @@
 @media screen and (max-width: 480px) {
+	body {
+		overflow: hidden;
+	}
     #bannerDot {
     	display: none;
     	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -201,7 +204,7 @@
 	height: 100%;
 	position: relative;
 	top: 0px;
-	transition: top ease-out 0.4s
+	transition: top ease-out 0.4s;
 }
 #bannerContent .otherOpacity .content h1 {
 	opacity: 0
