@@ -53,6 +53,12 @@
     #bannerContent .navList li.listNow {
     	border-bottom:2px solid black;
     }
+    #indexVideo {
+    	display: none
+    }
+    #page_01 .opacity {
+    	background: rgba(0,0,0,0.8);
+    }
     #page_01 .opacity .content h1 {
 		font-size: 20px;
 	}
