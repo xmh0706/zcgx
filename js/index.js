@@ -123,11 +123,14 @@ $(document).ready(function(){
 	$("#bannerContent").on("touchstart",function(e){
 	    startY = e.originalEvent.changedTouches[0].pageY;
 	    moveY = 0 
-	    // if (flash == 6) {
-	    // 	$("html").css("overflow","auto")
-	    // }else (
-	    // 	$("html").css("overflow","hidden")
-	    // )
+	    if (flash == 6) {
+	    	$("html").css("overflow","auto")
+	    	$("body").css("overflow","auto")
+	    }else (
+	    	$("html").css("overflow","hidden")
+	    	$("body").css("overflow","hidden")
+
+	    )
 	    // console.log(e)
 	    // console.log(startY)
 	});
