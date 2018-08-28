@@ -126,11 +126,11 @@ $(document).ready(function(){
 	    if (flash == 6) {
 	    	$("html").css("overflow","auto")
 	    	$("body").css("overflow","auto")
-	    }else (
+	    }else {
 	    	$("html").css("overflow","hidden")
 	    	$("body").css("overflow","hidden")
 
-	    )
+	    }
 	    // console.log(e)
 	    // console.log(startY)
 	});
