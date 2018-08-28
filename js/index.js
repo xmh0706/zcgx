@@ -83,7 +83,6 @@ $(document).ready(function(){
 	
 	var click = 0
 	$(".menuIcon").click(function(e){
-		e.stopPropagetion()
 		if(click % 2 == 0) {
 			$(".navList").css("display","block");
 			$(".menuIcon").css("transform","rotateZ(90deg)")
@@ -122,7 +121,7 @@ $(document).ready(function(){
 	})//鼠标按住滑动界面
 	
 	$("#bannerContent").on("touchstart",function(e){
-		e.preventDefault()
+	
 	    startY = e.originalEvent.changedTouches[0].pageY;
 	    moveY = 0 
 	    // if (flash == 6) {
@@ -137,6 +136,7 @@ $(document).ready(function(){
 	    // console.log(startY)
 	});
 	$("#bannerContent").bind("touchmove",function(e){  	
+			e.preventDefault()
 		moveY = 0
 	    var moveEndY = e.originalEvent.changedTouches[0].pageY;
 	    moveY=moveEndY-startY;
