@@ -48,7 +48,9 @@ $(document).ready(function(){
 	var height= document.getElementById("banner").offsetHeight
 	$("#bannerContent .button").click(function(){
 		$("#bannerContent .button .hideImg").css("display","block")
-	})
+	})//响应式布局 了解详情点击事件(未做完)
+
+
 	$("#bannerDot li").click(function(){
   		flash = ($(this).index());
   		chooseATTR()
@@ -93,11 +95,12 @@ $(document).ready(function(){
 	});//响应式布局menu变化
 
 	$("#bannerContent").mousedown(function(event){
-		var downY = event.originalEvent.clientY
+		var downY = event.originalEvent.clientY	
 		chooseY = 0
-		$(this).mousemove(function(event){
-			 chooseY = event.originalEvent.clientY - downY
-			 // console.log(chooseY)
+
+		$(this).mousemove(function(event){	
+			chooseY = event.originalEvent.clientY - downY
+			// console.log(event.originalEvent.clientY)
 			$('#bannerContent').css("top", (-height*flash)+chooseY + "px");
 		})
 	})
@@ -120,12 +123,12 @@ $(document).ready(function(){
 	
 	$("#bannerContent").on("touchstart",function(e){
 	    startY = e.originalEvent.changedTouches[0].pageY;
+	    moveY = 0
 	    // console.log(e)
 	    // console.log(startY)
 	});
 	$("#bannerContent").bind("touchmove",function(e){  	
 	    var moveEndY = e.originalEvent.changedTouches[0].pageY;
-	    moveY = 0
 	    moveY=moveEndY-startY;
 	    // console.log(moveY)
 	    $('#bannerContent').css("top", (-height*flash)+moveY + "px");
