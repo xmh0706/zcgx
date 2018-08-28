@@ -97,7 +97,6 @@ $(document).ready(function(){
 	$("#bannerContent").mousedown(function(event){
 		var downY = event.originalEvent.clientY	
 		chooseY = 0
-
 		$(this).mousemove(function(event){	
 			chooseY = event.originalEvent.clientY - downY
 			// console.log(event.originalEvent.clientY)
