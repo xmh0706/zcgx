@@ -199,12 +199,11 @@
 	height: 100%;
 	overflow: hidden;
 	color: #FFFFFF;
-	position: relative;
 }
 #banner #bannerContent {
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	top: 0px;
 	transition: top ease-out 0.4s;
 }
