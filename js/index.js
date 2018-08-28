@@ -94,31 +94,31 @@ $(document).ready(function(){
 		}	
 	});//响应式布局menu变化//
 
-	$("#bannerContent").mousedown(function(event){
-		var downY = event.originalEvent.clientY	
-		chooseY = 0
-		$(this).mousemove(function(event){	
-			chooseY = event.originalEvent.clientY - downY
-			// console.log(event.originalEvent.clientY)
-			$('#bannerContent').css("top", (-height*flash)+chooseY + "px");
-		})
-	})
-	$("#bannerContent").mouseup(function(event){
-		$(this).unbind('mousemove');
-		// console.log(event.originalEvent.clientY)
-		if (chooseY < -30) {
-			flash ++;
-			if( flash==7 ) {
-				flash = 6;
-				$('html,body').animate({scrollTop:$('#footer').offset().top }, 500);
-			}
-		}else if(chooseY > 30){
-			flash --;
-			flash =(flash==-1)?0:flash;
-			$('html,body').animate({scrollTop:0 }, 500);
-		}
-		chooseATTR()
-	})//鼠标按住滑动界面
+	// $("#bannerContent").mousedown(function(event){
+	// 	var downY = event.originalEvent.clientY	
+	// 	chooseY = 0
+	// 	$(this).mousemove(function(event){	
+	// 		chooseY = event.originalEvent.clientY - downY
+	// 		// console.log(event.originalEvent.clientY)
+	// 		$('#bannerContent').css("top", (-height*flash)+chooseY + "px");
+	// 	})
+	// })
+	// $("#bannerContent").mouseup(function(event){
+	// 	$(this).unbind('mousemove');
+	// 	// console.log(event.originalEvent.clientY)
+	// 	if (chooseY < -30) {
+	// 		flash ++;
+	// 		if( flash==7 ) {
+	// 			flash = 6;
+	// 			$('html,body').animate({scrollTop:$('#footer').offset().top }, 500);
+	// 		}
+	// 	}else if(chooseY > 30){
+	// 		flash --;
+	// 		flash =(flash==-1)?0:flash;
+	// 		$('html,body').animate({scrollTop:0 }, 500);
+	// 	}
+	// 	chooseATTR()
+	// })//鼠标按住滑动界面
 	
 	$("#bannerContent").on("touchstart",function(e){
 	    startY = e.originalEvent.changedTouches[0].pageY;
