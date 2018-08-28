@@ -127,9 +127,10 @@ $(document).ready(function(){
 	    // console.log(startY)
 	});
 	$("#bannerContent").bind("touchmove",function(e){  	
+		moveY = 0
 	    var moveEndY = e.originalEvent.changedTouches[0].pageY;
 	    moveY=moveEndY-startY;
-	    // console.log(moveY)
+	    // console.log(moveEndY)
 	    $('#bannerContent').css("top", (-height*flash)+moveY + "px");
 	});
 	$("#bannerContent").on("touchend",function(e){
