@@ -1,5 +1,5 @@
 @media screen and (max-width: 480px) {
-	html,body {
+	body {
 		overflow: hidden;
 	}
     #bannerDot {
