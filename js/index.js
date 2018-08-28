@@ -92,7 +92,7 @@ $(document).ready(function(){
 			$(".menuIcon").css("transform","none")
 			click = 0
 		}	
-	});//响应式布局menu变化
+	});//响应式布局menu变化//
 
 	$("#bannerContent").mousedown(function(event){
 		var downY = event.originalEvent.clientY	
