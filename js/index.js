@@ -127,6 +127,7 @@ $(document).ready(function(){
 	    	$("html").css("overflow","auto")
 	    	$("body").css("overflow","auto")
 	    }else {
+	    	$('html,body').animate({scrollTop:0 }, 500);
 	    	$("html").css("overflow","hidden")
 	    	$("body").css("overflow","hidden")
 
