@@ -121,7 +121,7 @@ $(document).ready(function(){
 	})//鼠标按住滑动界面
 	
 	$("#bannerContent").on("touchstart",function(e){
-		e.preventDefault()
+		// e.preventDefault()
 	    startY = e.originalEvent.changedTouches[0].pageY;
 	    moveY = 0 
 	    // if (flash == 6) {
