@@ -131,6 +131,11 @@ $(document).ready(function(){
 	    var moveEndY = e.originalEvent.changedTouches[0].pageY;
 	    moveY=moveEndY-startY;
 	    // console.log(moveEndY)
+	    if (flash = 6){
+	    	$('html,body').animate({scrollTop:0 }, 200);
+	    }else{
+	    	scrollTo(0,0)
+	    }
 	    $('#bannerContent').css("top", (-height*flash)+moveY + "px");
 	});
 	$("#bannerContent").on("touchend",function(e){
