@@ -131,7 +131,6 @@ $(document).ready(function(){
 	    var moveEndY = e.originalEvent.changedTouches[0].pageY;
 	    moveY=moveEndY-startY;
 	    // console.log(moveEndY)
-	    scrollTo(0,0)
 	    $('#bannerContent').css("top", (-height*flash)+moveY + "px");
 	});
 	$("#bannerContent").on("touchend",function(e){
