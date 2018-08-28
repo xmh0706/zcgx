@@ -82,7 +82,8 @@ $(document).ready(function(){
 	});//滚轮切换
 	
 	var click = 0
-	$(".menuIcon").click(function(){
+	$(".menuIcon").click(function(e){
+		e.stopPropagetion()
 		if(click % 2 == 0) {
 			$(".navList").css("display","block");
 			$(".menuIcon").css("transform","rotateZ(90deg)")
@@ -121,7 +122,7 @@ $(document).ready(function(){
 	})//鼠标按住滑动界面
 	
 	$("#bannerContent").on("touchstart",function(e){
-		// e.preventDefault()
+		e.preventDefault()
 	    startY = e.originalEvent.changedTouches[0].pageY;
 	    moveY = 0 
 	    // if (flash == 6) {
