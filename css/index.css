@@ -57,10 +57,15 @@
     	display: none
     }
     #page_01 .opacity {
-    	background: rgba(0,0,0,0.8);
+    	background-image: url("../images/photo_bg.jpg");
+    	background-size: cover;
     }
     #page_01 .opacity .content h1 {
 		font-size: 20px;
+	}
+	#page_01 .bigLogo {
+		width: 200px;
+		height: 200px
 	}
 	#page_02 .opacity .content h1 {
 		font-size: 18px;
@@ -107,6 +112,10 @@
 		line-height: 30px;
 		height: 30px;
 		display: block;
+	}
+	#page_01 .bigLogo {
+		width: 300px;
+		height: 300px
 	}
 	#page_01 .opacity .head .navList li a.listNow {
 		border-bottom: 2px solid white
@@ -159,10 +168,14 @@
 		display: block;
 	}
 	#page_01 .opacity .head .navList li a.listNow {
-	border-bottom: 2px solid white
+		border-bottom: 2px solid white
 	}
 	#page_01 .opacity .head .navList li a:hover {
 		border-bottom: 2px solid white;
+	}
+	#page_01 .bigLogo {
+		width: 500px;
+		height: 500px
 	}
 	#page_01 .opacity .content h1 {
 		font-size: 40px;
@@ -276,7 +289,8 @@
 	z-index: 50
 }
 .opacity {
-	height: 100%
+	height: 100%;
+	position: relative;
 }
 #page_01 .opacity .head .leftLogo {
 	width: 134px;
@@ -292,6 +306,15 @@
 	position: relative;
 	width: 100%;
 	z-index: 1
+}
+#page_01 .bigLogo {
+	background-image: url("../images/index_big_logo.png");
+	background-size: cover;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 5
 }
 /*#page_01 {
 	background: url("../images/index_01.jpg") center no-repeat; 
