@@ -47,6 +47,10 @@ li{
 		position: relative;
 		top: 150px
 	}
+	footer .content .footerRightText .footerLink {
+		top:-100px !important;
+		left: 60% !important
+	}
 	footer .content .footerRightText .text {
 		margin-top: 10px;
 	}
@@ -89,20 +93,38 @@ footer a{
 footer .content .footerLogo {
 	width: 201px;
 	height: 62px;
-	background-image: url("../images/index_footer_logo.png");
+	background-image: url("../images/index_01_logo.png");
 	background-size: cover;
 }
 footer .content .footerLeftText {
 	margin-top: 35px;
+	max-width: 600px;
 }
 footer .content .footerLeftText p {
-	height: 36px;
-	line-height: 36px;
+	line-height: 32px;
+	position: relative;
+}
+footer .content .footerLeftText p .xlwb{
+	height: 24px;
+	width: 24px;
+	background-image: url("../images/weibo.svg");
+	background-size:cover;
+	display: block;
+	position: absolute;
+	left: 80px;
+	top: 6px
+
 }
 
 footer .content .footerRightText .wx {
-	display: inline-block;
+	/*display: inline-block;*/
 	position: relative;
+	text-align: center;
+}
+footer .content .footerRightText .footerLink {
+	position: absolute;
+	top: -120px;
+	left: 120px
 }
 footer .content .footerRightText .wx:before,.wb:before {
 	content: "\20";
@@ -110,13 +132,14 @@ footer .content .footerRightText .wx:before,.wb:before {
 	height: 104px;
 	background-size: cover;
 	position: absolute;
-	top: -127px
+	top:-31px;
+	
 }
 footer .content .footerRightText .wx:before {
-	background-image: url("../images/wx.png");
-	left:-17px;
+	background-image: url("../images/zcgx_gzh.jpg");
+	left: -120px
 }
-footer .content .footerRightText .wb {
+/*footer .content .footerRightText .wb {
 	display: inline-block;
 	margin-left: 110px;
 	position: relative;

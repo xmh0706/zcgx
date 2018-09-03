@@ -57,7 +57,7 @@
     	display: none
     }
     #page_01 .opacity {
-    	background-image: url("../images/photo_bg.jpg");
+    	background: url("../images/photo_bg.jpg") center no-repeat;
     	background-size: cover;
     }
     #page_01 .opacity .content h1 {
@@ -83,9 +83,59 @@
 	#bannerContent .content h1 {
 		font-size: 24px;
 	}
-	.page .content .button .hideImg {
+	.page .content .hideImg {
+		width: 200px;
+		height: 240px;
+		background-color: #fff;
+		border-radius: 5px;
 		display: none;
+		position: relative;
+		left: 0px;
+		top:5px;
+	} 
+	.page .content .hideImg .closeIcon {
+		width: 24px;
+		height: 24px;
+		background-image: url("../images/close.svg");
+		background-size: cover;
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		cursor: pointer;
 	}
+	.page .content .hideImg img {
+		width: 160px;
+		height: 160px;
+		margin: 20px;
+	}
+	.page .content .hideImg .font {
+ 		color:black;
+ 		padding: 0 !important;
+ 		width: 200px;
+ 		height: 24px;
+ 		line-height: 24px;
+ 		font-size:16px;
+ 		text-align: center;
+ 		color: black
+	}
+	#hide_06 {
+		width: 320px;
+		height: 190px;
+		left: -20px
+	}
+	#hide_06 .hide_06Last {
+		margin-right: 10px;
+	}
+	#hide_06 img {
+		width: 90px;
+		height: 90px;
+		margin:5px;
+		margin-bottom: 0px; 
+	}
+	#hide_06 .font{
+		width: 100px;
+	}
+
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   	#bannerDot {
@@ -127,7 +177,7 @@
 		font-size: 40px;
 	}
 	#page_02 .opacity .content h1 {
-		font-size: 32px;
+		font-size: 30px;
 	}
 	#page_03 .content p {
 		width: 350px !important
@@ -138,10 +188,50 @@
 	#bannerContent .content h1 {
 		font-size: 40px;
 	}
-	.page .content .button .hideImg {
+	.page .content .hideImg {
+		width: 200px;
+		height: 240px;
+		background-color: #fff;
+		border-radius: 5px;
 		display: none;
+		position: relative;
+		left: 160px;
+		top:-102px;
 	}
-	
+	.page .content .hideImg .closeIcon {
+		width: 24px;
+		height: 24px;
+		background-image: url("../images/close.svg");
+		background-size: cover;
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		cursor: pointer;
+	}
+	.page .content .hideImg img {
+		width: 160px;
+		height: 160px;
+		margin: 20px;
+	}
+	.page .content .hideImg .font {
+ 		color:black;
+ 		padding: 0 !important;
+ 		width: 200px;
+ 		height: 24px;
+ 		line-height: 24px;
+ 		font-size:16px;
+ 		text-align: center;
+ 		color: black
+	}
+	#hide_06 {
+		width: 610px;
+		top: 5px;
+		left: 0
+	}
+	#hide_06 img{
+		margin:10px;
+		margin-bottom: 0px;
+	}
 }
 @media screen and (min-width: 769px) {
     .nextArrow {
@@ -181,7 +271,7 @@
 		font-size: 40px;
 	}
 	#page_02 .opacity .content h1 {
-		font-size: 32px;
+		font-size: 30px;
 	}
 	#bannerContent .content p {
 		font-size:  20px
@@ -189,7 +279,7 @@
 	#bannerContent .content h1 {
 		font-size: 40px;
 	}
-	.page .content .button .hideImg {
+	.page .content .hideImg {
 		width: 200px;
 		height: 240px;
 		background-color: #fff;
@@ -199,12 +289,22 @@
 		left: 160px;
 		top:-102px;
 	}
-	.page .content .button .hideImg img {
-		width: 180px;
-		height: 180px;
-		margin: 10px;
+	.page .content .hideImg .closeIcon {
+		width: 24px;
+		height: 24px;
+		background-image: url("../images/close.svg");
+		background-size: cover;
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		cursor: pointer;
 	}
-	.page .content .button .hideImg span {
+	.page .content .hideImg img {
+		width: 160px;
+		height: 160px;
+		margin: 20px;
+	}
+	.page .content .hideImg .font {
  		color:black;
  		padding: 0 !important;
  		width: 200px;
@@ -212,9 +312,14 @@
  		line-height: 24px;
  		font-size:16px;
  		text-align: center;
+ 		color: black
 	}
-	.page .content .button:hover .hideImg {
-		display: block;
+	#hide_06 {
+		width: 610px;
+	}
+	#hide_06 img{
+		margin:10px;
+		margin-bottom: 0px;
 	}
 }
 #banner {
@@ -317,8 +422,8 @@
 	z-index: 5
 }
 /*#page_01 {
-	background: url("../images/index_01.jpg") center no-repeat; 
-	background-size:cover;
+	background: url("../images/photo_bg.jpg") center no-repeat;
+    background-size: cover;
 }*/
 /*#page_01 .opacity .content {
 	position: absolute;
@@ -351,7 +456,8 @@
 #page_02 .opacity .content h1 {
 	font-weight: 700;
 	text-align: left;
-	margin-top: 20px
+	margin-top: 20px;
+	white-space: pre-wrap;
 }
 #page_03 {
 	background: url("../images/index_03.jpg") center no-repeat; 
@@ -382,9 +488,11 @@
 	border-radius: 5px;
 	cursor: pointer;
 }
-#bannerContent .content .button span {
-	display: inline-block;
-	padding: 7px 38px;
+#bannerContent .content .button div {
+	height: 40px;
+	width: 140px;
+	line-height: 40px;
+	text-align: center;
 }
 #page_04 {
 	background: url("../images/index_04.jpg") center no-repeat; 
@@ -402,7 +510,7 @@
 	border:1px solid #cb6a09 !important;
 }
 #page_05 {
-	background: url("../images/index_05.jpg") center no-repeat; 
+	background: url("../images/index_05.png") center no-repeat; 
 	background-size:cover;
 }
 #page_05 .content {
@@ -411,6 +519,10 @@
 	left: 10%;
 	width: 720px;
 	margin-top: -149px;
+	color: #cb6a09
+}
+#page_05 .content  .button {
+	border:1px solid #cb6a09 !important;
 }
 #page_06 {
 	background: url("../images/index_06.jpg") center no-repeat; 
@@ -429,6 +541,9 @@
 	font-size: 20px;
 	width: 530px;
 	height: 36px;
+}
+.page .content .hideImg li {
+	display: inline-block;
 }
 #page_07 {
 	background: url("../images/index_07.jpg") center no-repeat; 

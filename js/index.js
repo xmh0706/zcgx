@@ -13,12 +13,30 @@ function preArrow(){
 }//上一页
 function nextArrow(){
 	flash++;
-	flash =(flash==7)?6:flash;
+	flash =(flash==6)?5:flash;
 	chooseATTR()
 }//下一页
 // setInterval(function(){nextArrow()},1000)
 // 
+function closeHideImg () {
+	document.getElementById('hide_04').style.display = 'none'
+	document.getElementById('hide_05').style.display = 'none'
+	document.getElementById('hide_06').style.display = 'none'
+	document.getElementById('hide_07').style.display = 'none'
+}
 
+function openHideImg04 () {
+	document.getElementById('hide_04').style.display = 'block'
+}
+function openHideImg05 () {
+	document.getElementById('hide_05').style.display = 'block'
+}
+function openHideImg06 () {
+	document.getElementById('hide_06').style.display = 'block'
+}
+function openHideImg07 () {
+	document.getElementById('hide_07').style.display = 'block'
+}
 
 //
 
@@ -46,11 +64,14 @@ function setVideo () {
 
 $(document).ready(function(){
 	var height= document.getElementById("banner").offsetHeight
-	$("#bannerContent .button").click(function(){
-		$("#bannerContent .button .hideImg").css("display","block")
-	})//响应式布局 了解详情点击事件(未做完)
-
-
+	var width= document.getElementById("banner").offsetWidth
+	if (width > 768) {
+		$(".page .button").hover(function(){
+			$(".hideImg").css('display','block')
+		},function(){
+			$(".hideImg").css('display','none')
+		})
+	}
 	$("#bannerDot li").click(function(){
   		flash = ($(this).index());
   		chooseATTR()
@@ -68,7 +89,7 @@ $(document).ready(function(){
 				$('html,body').animate({scrollTop:0 }, 300)
 				return false
 			}else{
-				if (flash < 6) {
+				if (flash < 5) {
 					nextArrow()
 					$('html,body').animate({scrollTop:0 }, 300)
 					return false
@@ -108,8 +129,8 @@ $(document).ready(function(){
 		// console.log(event.originalEvent.clientY)
 		if (chooseY < -30) {
 			flash ++;
-			if( flash==7 ) {
-				flash = 6;
+			if( flash==6 ) {
+				flash = 5;
 				$('html,body').animate({scrollTop:$('#footer').offset().top }, 500);
 			}
 		}else if(chooseY > 30){
@@ -147,8 +168,8 @@ $(document).ready(function(){
 		 //向上滑动
 		if(moveY < 0){  
 	    	flash ++;
-			if( flash==7 ) {
-				flash = 6;
+			if( flash==6 ) {
+				flash = 5;
 				$('html,body').animate({scrollTop:$('#footer').offset().top }, 500);
 			}
 	    }

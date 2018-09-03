@@ -34,39 +34,39 @@
 			<div id="page_02" class="page otherOpacity">
 				<div class="opacity">
 					<div class="content">
-						<h1>使命：<span>用新技术为检验检测认证人赋能</span></h1>
+						<h1>使    命：<span>用新技术为检验检测认证人赋能</span></h1>
+						<h1>愿    景：<span>让每个检验检测认证人更值钱</span></h1>
 						<h1>价值观：<span>助力检验检测认证人的价值成长</span></h1>
-						<h1>愿景：<span>让每个检验检测认证人更值钱</span></h1>
 					</div>
 					<div class="nextArrow whiteArrow" onclick="nextArrow()"></div>
 				</div>
 			</div>
-			<div id="page_03" class="page otherOpacity">
+			<!-- <div id="page_03" class="page otherOpacity">
 				<div class="content">
 					<h1>深度解读的原创自媒体</h1>
 					<p>TIC学院是中创国新的核心产品，致力于为TIC从业者的认知升级和技能提升提供全方位的服务。</p>
 					<div class="button">
-						<span>了解详情</span>
-						<div class="hideImg">
-							<img src="images/wx.png" alt="">
-							<span>扫一扫，了解更多</span>
-							<div class="closeIcon"></div>
-						</div>
+						<div>了解详情</div>
+					</div>
+					<div class="hideImg">
+						<img src="images/wx.png" alt="">
+						<span>扫一扫，了解更多</span>
+						<div class="closeIcon"></div>
 					</div>
 				</div>
 				<div class="nextArrow whiteArrow" onclick="nextArrow()"></div>
-			</div>
+			</div> -->
 			<div id="page_04" class="page otherOpacity">
 				<div class="content">
-					<h1>原创作者招募令</h1>
-					<p>每一个人都可以成为行业的网红，打造个人意见领袖。</p>
-					<div class="button">
-						<span>了解详情</span>
-						<div class="hideImg">
-							<img src="images/wx.png" alt="">
-							<span>扫一扫，了解更多</span>
-							<div class="closeIcon"></div>
-						</div>
+					<h1>原创作者计划</h1>
+					<p>每个检验检测认证人都可以成为行业意见领袖。</p>
+					<div class="button" id="button_04" onclick="openHideImg04()">
+						<div>了解详情</div>
+					</div>
+					<div class="hideImg" id="hide_04">
+						<img src="images/index_04_erweima.jpg" alt="">
+						<div class="font">添加工作人员了解详情</div>
+						<div class="closeIcon" onclick="closeHideImg()"></div>
 					</div>
 				</div>
 				<div class="nextArrow whiteArrow" onclick="nextArrow()"></div>
@@ -75,13 +75,13 @@
 				<div class="content">
 					<h1>人脉圈</h1>
 					<p>用圈子的力量赋能</p>
-					<div class="button">
-						<span>了解详情</span>
-						<div class="hideImg">
-							<img src="images/wx.png" alt="">
-							<span>扫一扫，了解更多</span>
-							<div class="closeIcon"></div>
-						</div>
+					<div class="button" id="button_07" onclick="openHideImg07()">
+						<div>了解详情</div>
+					</div>
+					<div class="hideImg" id="hide_07">
+						<img src="images/index_07_zsxq.png" alt="">
+						<div class="font">扫码加入我们</div>
+						<div class="closeIcon" onclick="closeHideImg()"></div>
 					</div>
 				</div>
 				<div class="nextArrow whiteArrow" onclick="nextArrow()"></div>
@@ -89,14 +89,14 @@
 			<div id="page_05" class="page otherOpacity">
 				<div class="content">
 					<h1>读书赋能</h1>
-					<p>你能走多远,取悦于认知</p>
-					<div class="button">
-						<span>了解详情</span>
-						<div class="hideImg">
-							<img src="images/wx.png" alt="">
-							<span>扫一扫，了解更多</span>
-							<div class="closeIcon"></div>
-						</div>
+					<p>你能走多远，取决于认知。</p>
+					<div class="button" id="button_05" onclick="openHideImg05()">
+						<div>了解详情</div>
+					</div>
+					<div class="hideImg" id="hide_05">
+						<img src="images/index_05_erweima.png" alt="">
+						<div class="font">见识</div>
+						<div class="closeIcon" onclick="closeHideImg()"></div>
 					</div>
 				</div>
 				<div class="nextArrow whiteArrow" onclick="nextArrow()"></div>
@@ -105,13 +105,28 @@
 				<div class="content">
 					<h1>效率工具箱</h1>
 					<p>让工作轻松愉悦起来</p>
-					<div class="button">
-						<span>了解工具</span>
-						<div class="hideImg">
-							<img src="images/wx.png" alt="">
-							<span>扫一扫，了解更多</span>
-							<div class="closeIcon"></div>
-						</div>
+					<div class="button" id="button_06" onclick="openHideImg06()">
+						<div>了解工具</div>
+					</div>
+					<div class="hideImg" id="hide_06">
+						<ul>
+							<li>
+								<img src="images/zrb.jpg" alt="">
+								<div class="font">中认宝</div>
+								<div class="font">让认证与您更亲近</div>
+							</li>
+							<li>
+								<img src="images/qnc.jpg" alt="">
+								<div class="font">去哪测</div>
+								<div class="font">找到您附近的检测机构</div>
+							</li>
+							<li class="hide_06Last">
+								<img src="images/ccc.jpg" alt="">
+								<div class="font">3C助手</div>
+								<div class="font">让3C认证变得简单</div>
+							</li>
+						</ul>
+						<div class="closeIcon" onclick="closeHideImg()"></div>
 					</div>
 				</div>
 				<div class="nextArrow whiteArrow" onclick="nextArrow()"></div>
@@ -126,26 +141,30 @@
 		<li></li>
 		<li></li>
 		<li></li>
-		<li></li>
 	</ul>
 	<div style="clear: both"></div>
 	<footer id="footer">
 		<div class="content">
 			<div class="footerLogo"></div>
 			<div class="footerLeftText">
-				<p>联系人：刘德华</p>
-				<p>电话：010-88776655</p>
-				<p>邮箱：makdfjk@kjdkfjkdj.com</p>
-				<p>地址：的刷卡缴费扩大进口附近地块今飞凯达九分裤</p>
+				<p>电话：010-65235812</p>
+				<p>邮箱：zcgxbj@163.com</p>
+				<p>地址：北京市海淀区知春路6号锦秋国际大厦A座905室</p>
+				<p class="icon">
+					关注我们：
+					<a href="https://weibo.com/u/5470340618?topnav=1&wvr=6&topsug=1&is_hot=1" class="xlwb"></a>
+				</p>
 			</div>
 			<div class="footerRightText">
 				<div class="footerLink">
-					<div class="wx">微信公众号</div>
-					<div class="wb">微博</div>
+					<div class="wx">
+						<p>微信扫码</p>
+						<p>关注公众号</p>
+					</div>
 				</div>
 				<div class="text">
-					<p><a href="http://www.miitbeian.gov.cn" target="_blank">京备587878676767号</a></p>
-					<p>中创国新 Copyright © 2017 All rights reserved</p>
+					<p><a href="http://www.miitbeian.gov.cn" target="_blank">京ICP备17040587号-2</a></p>
+					<p>中创国新（北京）科技发展有限公司</p>
 				</div>
 			</div>
 		</div>
